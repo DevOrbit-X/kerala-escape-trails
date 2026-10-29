@@ -23,7 +23,7 @@ function Index() {
         <img src={hero} alt="Munnar tea hills at sunrise" width={1920} height={1088} className="absolute inset-0 h-full w-full object-cover" />
         <div className="hero-overlay absolute inset-0" />
         <div className="container-site relative text-primary-foreground">
-          <p className="text-sm font-semibold uppercase tracking-[0.25em]">From Tamil Nadu to God's Own Country</p>
+          <p className="text-sm font-semibold uppercase tracking-[0.25em]">FROM TAMIL NADU TO GOD'S OWN COUNTRY KERALA</p>
           <h1 className="mt-4 max-w-3xl text-5xl font-semibold leading-tight md:text-7xl">Your Kerala escape starts here.</h1>
           <p className="mt-5 max-w-xl text-lg opacity-90">Misty hills, quiet backwaters and coastal heritage — with comfortable travel from Chennai, Coimbatore and Madurai.</p>
           <div className="mt-8 flex flex-wrap gap-3">
