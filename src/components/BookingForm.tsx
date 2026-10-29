@@ -14,14 +14,14 @@ const schema = z.object({
 
 const field = "mt-1 w-full rounded-xl border border-input bg-card px-4 py-3 outline-none focus:border-ring focus:ring-2 focus:ring-ring/30";
 
-export function BookingForm({ initialDestination }: { initialDestination?: Destination }) {
+export function BookingForm({ initialDestination }: { initialDestination?: Destination | undefined }) {
   const [status, setStatus] = useState<"idle" | "sending" | "done">("idle");
   const [error, setError] = useState<string | null>(null);
 
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     const parsed = schema.safeParse(Object.fromEntries(new FormData(e.currentTarget)));
-    if (!parsed.success) return setError(parsed.error.issues[0].message);
+    if (!parsed.success) return setError(parsed.error.issues[0]?.message ?? "Please check the form");
     setError(null);
     setStatus("sending");
     const { error } = await supabase.from("booking_requests").insert(parsed.data);
