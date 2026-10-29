@@ -5,7 +5,7 @@ import { DESTINATIONS, type Destination } from "@/lib/data";
 
 export const Route = createFileRoute("/book")({
   validateSearch: (s: Record<string, unknown>): { destination?: Destination } =>
-    DESTINATIONS.includes(s.destination as Destination) ? { destination: s.destination as Destination } : {},
+    DESTINATIONS.includes(s["destination"] as Destination) ? { destination: s["destination"] as Destination } : {},
   head: () => ({
     meta: [
       { title: "Book Your Trip — Kerala Escapes" },
