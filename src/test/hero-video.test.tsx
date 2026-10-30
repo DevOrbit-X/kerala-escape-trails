@@ -42,7 +42,7 @@ describe("Homepage hero video", () => {
       "video/mp4",
       "video/mp4",
     ]);
-    for (const s of sources) expect(s.src).toMatch(/^\/__l5e\/assets-v1\//);
+    for (const s of sources) expect(s.getAttribute("src")).toMatch(/^\/__l5e\/assets-v1\//);
 
     // Static fallback photo stays in the DOM under the video.
     expect(screen.getByAltText("Munnar tea hills at sunrise")).toBeInTheDocument();
