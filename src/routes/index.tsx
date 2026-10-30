@@ -28,6 +28,7 @@ function Index() {
         <img src={hero} alt="Munnar tea hills at sunrise" width={1920} height={1088} className="absolute inset-0 h-full w-full object-cover" />
         <video
           className="hero-video absolute inset-0 h-full w-full object-cover"
+          title="Kerala landscape background video"
           autoPlay
           muted
           loop
