@@ -1,25 +1,33 @@
+import * as React from "react";
 import { QueryClient } from "@tanstack/react-query";
-import { createRouter, RouterProvider } from "@tanstack/react-router";
+import { createRouter, RouterContextProvider } from "@tanstack/react-router";
 import { render, screen } from "@testing-library/react";
 import { describe, expect, it } from "vitest";
 
 import { routeTree } from "@/routeTree.gen";
+import { Route as IndexRoute } from "@/routes/index";
 
-// The hero must play a looping, silent, inline video and keep a static picture
-// underneath it for browsers that refuse to autoplay or ask for reduced motion.
+// The homepage hero must play a looping, silent, inline video and keep a static
+// picture behind it for browsers that refuse to autoplay or ask for reduced motion.
+const Hero = IndexRoute.options.component as React.ComponentType;
+
+function renderHero() {
+  const router = createRouter({
+    routeTree,
+    context: { queryClient: new QueryClient() },
+  });
+  return render(
+    <RouterContextProvider router={router}>
+      <Hero />
+    </RouterContextProvider>,
+  );
+}
+
 describe("Homepage hero video", () => {
-  const renderHome = () => {
-    const router = createRouter({
-      routeTree,
-      context: { queryClient: new QueryClient() },
-    });
-    render(<RouterProvider router={router} />);
-  };
+  it("plays silently on loop with a poster and keeps a static photo behind it", () => {
+    renderHero();
 
-  it("plays silently on loop and keeps a poster plus a static photo behind it", async () => {
-    renderHome();
-
-    const video = await screen.findByTitle("Kerala landscape background video");
+    const video = screen.getByTitle("Kerala landscape background video");
     expect(video.autoplay).toBe(true);
     expect(video.muted).toBe(true);
     expect(video.loop).toBe(true);
