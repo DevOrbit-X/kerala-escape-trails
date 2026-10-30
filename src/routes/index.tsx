@@ -1,6 +1,11 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Bus, ShieldCheck, Wallet } from "lucide-react";
 import hero from "@/assets/hero-munnar.jpg";
+import heroPoster from "@/assets/hero-poster.jpg.asset.json";
+import heroVideoDesktop from "@/assets/hero-kerala-1080.mp4.asset.json";
+import heroVideoMobile from "@/assets/hero-kerala-720.mp4.asset.json";
+import heroVideoDesktopWebm from "@/assets/hero-kerala-1080.webm.asset.json";
+import heroVideoMobileWebm from "@/assets/hero-kerala-720.webm.asset.json";
 import { DestinationGrid, PackageGrid, Reviews } from "@/components/Cards";
 import { SectionTitle } from "@/components/SiteLayout";
 
@@ -19,8 +24,26 @@ export const Route = createFileRoute("/")({
 function Index() {
   return (
     <>
-      <section className="relative flex min-h-[88vh] items-center">
+      <section className="relative flex min-h-[88vh] items-center overflow-hidden">
         <img src={hero} alt="Munnar tea hills at sunrise" width={1920} height={1088} className="absolute inset-0 h-full w-full object-cover" />
+        <video
+          className="hero-video absolute inset-0 h-full w-full object-cover"
+          title="Kerala landscape background video"
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="metadata"
+          poster={heroPoster.url}
+          aria-hidden="true"
+          tabIndex={-1}
+          disablePictureInPicture
+        >
+          <source src={heroVideoMobileWebm.url} media="(max-width: 768px)" type="video/webm" />
+          <source src={heroVideoDesktopWebm.url} type="video/webm" />
+          <source src={heroVideoMobile.url} media="(max-width: 768px)" type="video/mp4" />
+          <source src={heroVideoDesktop.url} type="video/mp4" />
+        </video>
         <div className="hero-overlay absolute inset-0" />
         <div className="container-site relative text-primary-foreground">
           <p className="text-sm font-semibold uppercase tracking-[0.25em]">FROM TAMIL NADU TO GOD'S OWN COUNTRY KERALA</p>
