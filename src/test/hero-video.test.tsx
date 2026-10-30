@@ -27,7 +27,7 @@ describe("Homepage hero video", () => {
   it("plays silently on loop with a poster and keeps a static photo behind it", () => {
     renderHero();
 
-    const video = screen.getByTitle("Kerala landscape background video");
+    const video = screen.getByTitle("Kerala landscape background video") as HTMLVideoElement;
     expect(video.autoplay).toBe(true);
     expect(video.muted).toBe(true);
     expect(video.loop).toBe(true);
