@@ -4,6 +4,8 @@ import hero from "@/assets/hero-munnar.jpg";
 import heroPoster from "@/assets/hero-poster.jpg.asset.json";
 import heroVideoDesktop from "@/assets/hero-kerala-1080.mp4.asset.json";
 import heroVideoMobile from "@/assets/hero-kerala-720.mp4.asset.json";
+import heroVideoDesktopWebm from "@/assets/hero-kerala-1080.webm.asset.json";
+import heroVideoMobileWebm from "@/assets/hero-kerala-720.webm.asset.json";
 import { DestinationGrid, PackageGrid, Reviews } from "@/components/Cards";
 import { SectionTitle } from "@/components/SiteLayout";
 
@@ -36,6 +38,8 @@ function Index() {
           tabIndex={-1}
           disablePictureInPicture
         >
+          <source src={heroVideoMobileWebm.url} media="(max-width: 768px)" type="video/webm" />
+          <source src={heroVideoDesktopWebm.url} type="video/webm" />
           <source src={heroVideoMobile.url} media="(max-width: 768px)" type="video/mp4" />
           <source src={heroVideoDesktop.url} type="video/mp4" />
         </video>
