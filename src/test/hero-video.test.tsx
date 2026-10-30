@@ -16,10 +16,10 @@ describe("Homepage hero video", () => {
     render(<RouterProvider router={router} />);
   };
 
-  it("plays silently on loop and keeps a poster plus a static photo behind it", () => {
+  it("plays silently on loop and keeps a poster plus a static photo behind it", async () => {
     renderHome();
 
-    const video = screen.getByTitle("Kerala landscape background video");
+    const video = await screen.findByTitle("Kerala landscape background video");
     expect(video.autoplay).toBe(true);
     expect(video.muted).toBe(true);
     expect(video.loop).toBe(true);
