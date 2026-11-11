@@ -1,34 +1,83 @@
-# Kerala Escape Trails
+# Kerala Escape Trails 🌴
 
-Create a responsive travel agency website called "Kerala Escapes" for trips from Tamil Nadu to Kerala.
+A responsive travel agency website concept designed to showcase Kerala destinations and travel packages for travellers from Tamil Nadu.
 
-Include a homepage, popular destinations like Munnar, Alleppey, Wayanad, and Kochi, and attractive travel package cards with prices.
+🌐 **Live Website:** https://kerala-escape-trails.lovable.app
 
-Add a simple booking form where users can select their destination, travel date, and number of travellers.
+💻 **GitHub Repository:** https://github.com/DevOrbit-X/kerala-escape-trails
 
-Use beautiful Kerala landscape images, a green-and-white colour scheme, and a clean, modern design.
+## 📌 Project Overview
 
-Include an About Us section, customer reviews area, contact details, and a footer.
+Kerala Escape Trails is a travel website created to help visitors explore popular destinations in Kerala. It presents travel destinations, package information and a user-friendly interface for exploring travel options.
 
-Make the website mobile-friendly, visually appealing, and easy to navigate.
+The project focuses on providing a clean design, attractive visuals and a responsive browsing experience.
 
-This project was built with [Lovable](https://lovable.dev).
+## ✨ Key Features
 
-**Live app**: https://kerala-escape-trails.lovable.app
+- **Homepage:** Travel-themed landing page with an attractive design.
+- **Popular Destinations:** Explore Munnar, Alleppey, Wayanad and Kochi.
+- **Travel Packages:** Display travel packages with pricing information.
+- **Booking Form:** Interface for selecting destinations, travel dates and number of travellers.
+- **About Us:** Information about the travel service.
+- **Customer Reviews:** Section for displaying customer feedback.
+- **Responsive Design:** Layout designed for mobile and desktop screens.
+- **Visual Design:** Kerala landscape imagery with a green-and-white colour theme.
 
-## Build with Lovable
+## 🛠️ Technologies Used
 
-Continue developing this project in the [Lovable editor](https://lovable.dev/projects/7fcd41b8-d723-4ca7-8819-af67533e31ec).
+- React
+- TypeScript
+- Vite
+- Tailwind CSS
+- Supabase (project configuration and integration)
 
-- **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: every change made in Lovable is committed straight to this repository.
-- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
+## 🚀 Getting Started
 
-## Development
+To run the project locally:
 
-Prefer working locally? You need Node.js and npm — [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
+**1. Clone the repository**
 
-```sh
+```bash
+git clone https://github.com/DevOrbit-X/kerala-escape-trails.git
+```
+
+**2. Navigate to the project folder**
+
+```bash
+cd kerala-escape-trails
+```
+
+**3. Install dependencies**
+
+```bash
+npm install
+```
+
+**4. Configure environment variables**
+
+Create a local `.env` file using `.env.example` as a reference. Add the required Supabase configuration values.
+
+**5. Start the development server**
+
+```bash
+npm run dev
+```
+
+Open the local URL displayed in your terminal.
+
+## 🎯 Project Objective
+
+The objective of this project is to create a visually appealing and user-friendly travel website that makes exploring Kerala destinations and travel packages easier.
+
+## 👨‍💻 Developer
+
+**DevOrbit-X**
+
+GitHub: https://github.com/DevOrbit-X
+
+---
+
+*This project was developed with assistance from Lovable AI as part of a practical web development project.*
 git clone <this-repository-url>
 cd <repository-name>
 npm i
